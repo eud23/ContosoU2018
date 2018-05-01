@@ -7,8 +7,9 @@
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        @* mwilliams:  Add reference to font-awesome css*@
+        @* eudghy:  Add reference to font-awesome css*@
         <link rel="stylesheet" href="~/lib/font-awesome/web-fonts-with-css/css/fontawesome-all.css" />
+        <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" rel="stylesheet">
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
     <environment exclude="Development">
@@ -17,8 +18,9 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
               asp-fallback-href="~/lib/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css"
-              asp-fallback-test-class="fa" asp-fallback-test-property="display" 
+              asp-fallback-test-class="fa" asp-fallback-test-property="display"
               asp-fallback-test-value="inline-block" />
+        <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" rel="stylesheet">
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
 </head>
@@ -65,7 +67,7 @@
                 <p>&copy; 2018 - ContosoU2018</p>
             </footer>
         </div>*@
-    @* mwilliams:  rename main content and move footer outsite *@
+    @* eudghy:  rename main content and move footer outsite *@
     <section>
         @RenderBody()
     </section>
@@ -136,7 +138,11 @@
     </footer>
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
+        @* eurdghy: update to bootstrap 4 - requires popper.js *@
+        <script src="~/lib/popper.js/dist/umd/popper.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
     <environment exclude="Development">
@@ -152,12 +158,14 @@
                 asp-fallback-src="~/lib/popper.js/dist/popper.min.js"
                 asp-fallback-test="window.Popper">
         </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" 
-                integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" 
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+                integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
                 crossorigin="anonymous"
                 asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
         </script>
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
