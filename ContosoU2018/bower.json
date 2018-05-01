@@ -1,0 +1,11 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "font-awesome": "5.0.10",
+    "popper.js": "1.14.3",
+    "bootstrap": "4.1.0",
+    "jquery-ajax-unobtrusive": "3.2.5",
+    "jquery-ui": "1.12.1"
+  }
+}
