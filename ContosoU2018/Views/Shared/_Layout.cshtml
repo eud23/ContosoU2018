@@ -36,6 +36,9 @@
                     <li class="nav-item">
                         <a title="Home" class="nav-link" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
                     </li>
+                    @* eudghy: added partial menu*@
+                    @await Html.PartialAsync("_MenuPartial")
+
                     @* Contact dropdown menu *@
                     <li class="nav-item dropdown">
                         <a title="About Us" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
