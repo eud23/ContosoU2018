@@ -1,4 +1,5 @@
-﻿namespace ContosoU2018.Models
+﻿using System.ComponentModel.DataAnnotations;
+namespace ContosoU2018.Models
 {
     public class Enrollment
     {
@@ -12,6 +13,8 @@
 
         public int StudentID { get; set; }//FK with corresponding navigation property Student
 
+        //Display "No Grade Yet" when the Grade is null
+        [DisplayFormat(NullDisplayText ="No Grade Yet")]
         public Grade? Grade { get; set; }//? meaning is nullable - because we don't start with a grade
 
         //Navigation Property :  Each enrollment must be for one student

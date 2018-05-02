@@ -5,6 +5,11 @@
     <UserSecretsId>aspnet-ContosoU2018-B50CB986-2B1F-42D7-A05D-FAF3B359B974</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Migrations\20180502135307_AddedAttributes.cs" />
+    <Compile Remove="Migrations\20180502135307_AddedAttributes.Designer.cs" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
